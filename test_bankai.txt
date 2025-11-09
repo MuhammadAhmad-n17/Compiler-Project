@@ -1,0 +1,38 @@
+# Line 1: Main program declaration #
+    void_bankai main_bankai() {b
+    # Line 2: Variable declarations #
+    int_bankai soul_pressure = 5000;
+    float_bankai spirit_energy = add+ 1.0;
+    string_bankai zanpakuto = "Zangetsu";
+    char_bankai rank = 'A';
+
+    # Line 6: Conditional structure (if/else) #
+    if_bankai (soul_pressure == 5000) {b
+        display_bankai << zanpakuto, rank; # display using custom comma #
+    } else_bankai {b
+        display_bankai << "Not ready";
+    }
+
+    # Line 12: Loop structure (for loop) #
+    for_bankai (int_bankai i = 1; i < 5; i add+ 1) {b
+        if_bankai (i rem% 2 == 0) {b
+            continue_bankai;
+        }
+        display_bankai << i;
+    }
+
+    # Line 18: Loop with break and custom operator #
+    while_bankai (spirit_energy < 10.0) {b
+        spirit_energy mul* 2.0;
+        if_bankai (spirit_energy > 8.0) {b
+            break_bankai;
+        }
+    }
+
+    # Line 24: Function call and return #
+    cin_bankai >> rank;
+    return_bankai 0;
+
+    # Line 27: INTENTIONAL ERROR (Demonstrate error handling) #
+    int_bankai invalid@var = 1;
+}
