@@ -1,0 +1,8 @@
+int_bankai a;
+a = 5;
+
+if_bankai ( a == 5 ) {b
+    display_bankai << a;
+}
+
+cin_bankai >> a;
