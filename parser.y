@@ -4,6 +4,8 @@
 
 extern int yylex();
 extern int yylineno;
+extern FILE *yyin;
+
 void yyerror(const char *s);
 %}
 
@@ -25,7 +27,6 @@ void yyerror(const char *s);
 /* ===== Program ===== */
 program
     : stmt_list
-      { printf("Syntax analysis successful\n"); }
     ;
 
 /* ===== Statement List ===== */
@@ -102,3 +103,22 @@ void yyerror(const char *s)
 {
     printf("Syntax Error at line %d\n", yylineno);
 }
+
+int main(int argc, char **argv)
+{
+    if (argc > 1)
+    {
+        yyin = fopen(argv[1], "r");
+        if (!yyin)
+        {
+            perror(argv[1]);
+            return 1;
+        }
+    }
+
+    if (yyparse() == 0)
+        printf("Syntax analysis successful\n");
+
+    return 0;
+}
+

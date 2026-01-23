@@ -6,3 +6,4 @@ if_bankai ( a == 5 ) {b
 }
 
 cin_bankai >> a;
+
